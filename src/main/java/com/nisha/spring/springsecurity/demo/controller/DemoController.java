@@ -14,4 +14,14 @@ public class DemoController {
 	public String showHome() {
 		return "home";
 	}
+	// request mapping for /leaders
+	@GetMapping("/leaders") 
+	public String showLeaders() {
+		return "leaders";
+	}
+	// request mapping for /systems
+	@GetMapping("/systems") 
+	public String showSystems() {
+		return "systems";
+	}
 }

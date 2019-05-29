@@ -38,7 +38,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 		.and().formLogin().loginPage("/showMyLoginPage")
 		.loginProcessingUrl("/authenticateTheUser").permitAll()
 		.and().logout().logoutSuccessUrl("/") // after logout then redirect to landing page (root)
-		.permitAll();
+		.permitAll().and().exceptionHandling().accessDeniedPage("/access-denied");
 	}
 
 }
